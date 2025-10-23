@@ -84,8 +84,10 @@ function init() {
     fragmentShader: displayFragmentShader,
   });
 
-  loadImage("./portrait_top.png", topTexture, topTextureSize);
-  loadImage("./portrait_bottom.png", bottomTexture, bottomTextureSize);
+  // Use base path for GitHub Pages
+  const basePath = import.meta.env.BASE_URL;
+  loadImage(`${basePath}portrait_top.png`, topTexture, topTextureSize);
+  loadImage(`${basePath}portrait_bottom.png`, bottomTexture, bottomTextureSize);
 
   const planeGeometry = new THREE.PlaneGeometry(2, 2);
   const displayMesh = new THREE.Mesh(planeGeometry, displayMaterial);
