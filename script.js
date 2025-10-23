@@ -84,8 +84,8 @@ function init() {
     fragmentShader: displayFragmentShader,
   });
 
-  loadImage("./portrait_top.jpg", topTexture, topTextureSize);
-  loadImage("./portrait_bottom.jpg", bottomTexture, bottomTextureSize);
+  loadImage("./portrait_top.png", topTexture, topTextureSize);
+  loadImage("./portrait_bottom.png", bottomTexture, bottomTextureSize);
 
   const planeGeometry = new THREE.PlaneGeometry(2, 2);
   const displayMesh = new THREE.Mesh(planeGeometry, displayMaterial);
